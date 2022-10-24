@@ -5,8 +5,15 @@ import WeatherDisplay from "./Components/WeatherDisplay";
 import './index.css'
 
 const App = () =>{
+
+    const result = (result) =>{
+        console.log(result)
+    }
+
+
+
     return(<>
-    <Navbar />
+    <Navbar setResult={result}/>
     <WeatherDisplay />
     
     </>)

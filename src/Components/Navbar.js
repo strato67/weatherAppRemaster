@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 
-const Navbar = () => {
+const Navbar = ({setResult}) => {
 
     return(<>
       <div className="navbar bg-primary">
@@ -9,7 +9,7 @@ const Navbar = () => {
         <a className="btn btn-ghost normal-case text-xl">Weather App</a>
         </div>
         <div className="flex-none gap-2">
-        <SearchBar/>
+        <SearchBar setResult={setResult}/>
         
         <div className="form-control">
   <label className="label cursor-pointer">

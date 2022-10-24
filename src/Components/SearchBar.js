@@ -1,27 +1,17 @@
 import React, { useState } from "react";
 
-const SearchBar = () => {
+const SearchBar = ({setResult}) => {
 
-    const [searchLocation, setsearchLocation] = useState({
-        location: ''
-    });
+    const [searchLocation, setsearchLocation] = useState('');
 
     const handleSubmit= (e) =>{
         e.preventDefault();
-        console.log(searchLocation);
-        setsearchLocation({
-            location: ''
-        })
+        setResult(searchLocation);
+               
         
     }
 
-    const searchHandler = (e) =>{
-        setsearchLocation((values) => ({
-            ...values,
-            location: e.target.value,
-        }));
-        
-    }
+    const searchHandler = (e) => setsearchLocation(() => `${e.target.value}`);
 
     return(<>
         <form onSubmit={handleSubmit}>
