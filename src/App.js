@@ -1,19 +1,23 @@
 import React from "react";
 import Navbar from "./Components/Navbar";
 import WeatherDisplay from "./Components/WeatherDisplay";
+import { getWeather } from "./api";
 
 import './index.css'
 
 const App = () =>{
 
-    const result = (result) =>{
-        console.log(result)
+    async function getResult (result) {
+        const weatherData = await getWeather(result);
+
+        console.log(weatherData);
+        
     }
 
 
 
     return(<>
-    <Navbar setResult={result}/>
+    <Navbar setResult={getResult}/>
     <WeatherDisplay />
     
     </>)
