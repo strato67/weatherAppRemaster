@@ -2,7 +2,7 @@ import React from "react";
 import WeatherInfo from "./WeatherInfo";
 
 const WeatherDisplay = ({weatherData}) =>{
-
+    const weatherDataDisplay = () =>console.log(weatherData);
 
     return(<>
         <div className="hero min-h-screen bg-base-100">
@@ -14,7 +14,7 @@ const WeatherDisplay = ({weatherData}) =>{
                 </div>
                 
                 <div className="bg-neutral text-center p-4 rounded-lg">
-                    <h1 className="text-5xl font-bold">Search for location</h1>
+                    <h1 className="text-5xl font-bold">{weatherData.name}</h1>
                     <div className="divider"></div> 
                     <WeatherInfo />
                     <p className="py-6">-</p>
