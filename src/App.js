@@ -7,7 +7,11 @@ import './index.css'
 
 const App = () =>{
 
-    const [weatherInfo, setWeatherInfo] = useState({name:'Search for Location'});
+    const [weatherInfo, setWeatherInfo] = useState({name:'Search for Location',
+                                                    sys:{country:''},
+                                                    main:{temp:'-'}
+                                                
+                                                    });
 
     async function getResult (result) {
         const weatherData = await getWeather(result);
