@@ -12,7 +12,7 @@ const WeatherDisplay = ({weatherData, unitConversion}) =>{
                 <h2 className="text-5xl font-bold text-center px-3">{weatherData.main.temp !== '-'? `${Math.round(weatherData.main.temp-273.15)}°C` : weatherData.main.temp}</h2>
                 </div>
                 
-                <div className="bg-neutral text-center p-4 rounded-lg">
+                <div className="bg-neutral text-center p-4 rounded-lg lg:w-[196rem] lg:h-96">
                     <h1 className="text-5xl font-bold">{weatherData.sys.country == ''?  weatherData.name :  `${weatherData.name}, ${weatherData.sys.country}`}</h1>
                     <div className="divider"></div> 
                     <WeatherInfo />
