@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar";
 import WeatherDisplay from "./Components/WeatherDisplay";
 import { getWeather } from "./api";
@@ -19,11 +19,18 @@ const App = () =>{
         
     }
 
+    const [isCelsius, changeUnit] = useState(true);
 
+    const searchHandler = () => {
+        changeUnit(unit => !unit);
+
+    }
+
+    useEffect(()=>console.log(isCelsius));
 
     return(<>
-    <Navbar setResult={getResult}/>
-    <WeatherDisplay weatherData={weatherInfo}/>
+    <Navbar setResult={getResult} unitSelect={searchHandler}/>
+    <WeatherDisplay weatherData={weatherInfo} unitConversion={isCelsius}/>
     
     </>)
 }

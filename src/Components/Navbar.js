@@ -2,7 +2,7 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import UnitToggle from "./unitToggle";
 
-const Navbar = ({setResult}) => {
+const Navbar = ({setResult, unitSelect}) => {
 
     return(<>
       <div className="navbar bg-primary">
@@ -11,11 +11,7 @@ const Navbar = ({setResult}) => {
         </div>
         <div className="flex-none gap-2">
         <SearchBar setResult={setResult}/>
-        
-        <UnitToggle/>
-
-
-
+        <UnitToggle unitSelect={unitSelect}/>
         </div>
       </div>
     
