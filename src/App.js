@@ -26,8 +26,6 @@ const App = () =>{
 
     }
 
-    useEffect(()=>console.log(isCelsius));
-
     return(<>
     <Navbar setResult={getResult} unitSelect={searchHandler}/>
     <WeatherDisplay weatherData={weatherInfo} unitConversion={isCelsius}/>
