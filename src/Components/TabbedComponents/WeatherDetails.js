@@ -3,7 +3,7 @@ import React from "react";
 const WeatherDetails = () =>{
 
 
-    return(<>-</>);
+    return(<>details</>);
 }
 
 export default WeatherDetails;

@@ -2,7 +2,7 @@ import React from "react";
 
 const FiveDay = () =>{
 
-    return(<>-</>);
+    return(<>Five day</>);
 
 }
 
