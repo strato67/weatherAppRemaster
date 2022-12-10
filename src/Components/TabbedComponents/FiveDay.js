@@ -1,8 +1,9 @@
 import React from "react";
+import { unitCalculation } from './../../unitConvert'
 
-const FiveDay = () =>{
+const FiveDay = ({weatherData, unitConversion}) =>{
 
-    return(<>Five day</>);
+    return(<>{1<2?  <div className='py-5 text-xl'>No data</div> : <div className='py-5'>placeholder</div>}</>);
 
 }
 
