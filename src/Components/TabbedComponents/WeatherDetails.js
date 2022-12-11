@@ -6,7 +6,7 @@ const WeatherDetails = ({weatherData, unitConversion}) =>{
 
     return(<>
     
-    {weatherData.sys.country == ''?  <div className='py-5 text-xl'>No data</div> :
+    {weatherData.sys.country == ''?  <div className='py-5 text-xl'>Not Available </div> :
         <div className="overflow-x-auto py-5">
             <div className="grid grid-cols-2 ">
                 

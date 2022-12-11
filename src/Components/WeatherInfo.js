@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import FiveDay from "./TabbedComponents/FiveDay";
 import WeatherDetails from "./TabbedComponents/WeatherDetails";
 
-const WeatherInfo = ({weatherData, unitConversion}) =>{
+const WeatherInfo = ({weatherData, unitConversion, fiveForecast}) =>{
 
     const [activeTab, setActiveTab] = useState('Details');
 
     const tabContents = {
         'Details': <WeatherDetails key={0} weatherData={weatherData} unitConversion={unitConversion}/>,
-        '5 Day Forecast' : <FiveDay key={1}/>,
+        '5 Day Forecast' : <FiveDay key={1} fiveForecast={fiveForecast} unitConversion={unitConversion}/>,
         'Map':'poo'
 
     };

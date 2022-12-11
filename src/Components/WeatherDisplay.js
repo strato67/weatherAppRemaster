@@ -2,7 +2,7 @@ import React from "react";
 import WeatherInfo from "./WeatherInfo";
 import { unitCalculation } from "../unitConvert";
 
-const WeatherDisplay = ({weatherData, unitConversion}) =>{
+const WeatherDisplay = ({weatherData, unitConversion, fiveForecast}) =>{
     
     return(<>
         <div className="hero min-h-screen bg-base-100">
@@ -48,7 +48,7 @@ const WeatherDisplay = ({weatherData, unitConversion}) =>{
                     
                     <h1 className="text-5xl font-bold">{weatherData.sys.country == ''?  weatherData.name :  `${weatherData.name}, ${weatherData.sys.country}`}</h1>
                     <div className="divider"></div> 
-                    <WeatherInfo weatherData={weatherData} unitConversion={unitConversion}/>
+                    <WeatherInfo weatherData={weatherData} unitConversion={unitConversion} fiveForecast={fiveForecast}/>
                   
 
                 </div>

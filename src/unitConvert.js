@@ -4,8 +4,6 @@ const unitCalculation = (temperature, unitConversion) =>{
     return result;
 }
 
-
-
 const windCalculation = (speed, unitConversion) =>{
     let result;
     unitConversion == true ? result = `${Math.round(speed*3.6)}km/h`: result = `${Math.round(speed*2.237)}mph`
