@@ -14,12 +14,13 @@ const WeatherDetails = ({weatherData, unitConversion}) =>{
                 <div className="...">{ typeof weatherData.rain !== "undefined" ? `${precipCalculation(weatherData.rain['1h'],unitConversion)}` : precipCalculation(0,unitConversion) }</div>
                 <div className="bg-base-100 py-2">Snow</div>
                 <div className="...">{ typeof weatherData.snow !== "undefined" ? `${precipCalculation(weatherData.snow['1h'],unitConversion)}` : precipCalculation(0,unitConversion) }</div>
-                <div className="bg-base-100 py-2">Pressure</div>
-                <div className="...">{`${weatherData.main.pressure}hPa`}</div>
+                <div className="bg-base-100 py-2">Wind</div>
+                <div className="...">{`${windCalculation(weatherData.wind.speed,unitConversion)} ${weatherData.wind.deg}°`}</div>
                 <div className="bg-base-100 py-2">Humidity</div>
                 <div className="...">{`${weatherData.main.humidity}%`}</div>
-                <div className="bg-base-100 py-2">Wind Speed</div>
-                <div className="...">{`${windCalculation(weatherData.wind.speed,unitConversion)} ${weatherData.wind.deg}°`}</div>
+                <div className="bg-base-100 py-2 rounded-bl-lg rounded-br-lg ">Pressure</div>
+                <div className="...">{`${weatherData.main.pressure}hPa`}</div>
+              
             </div>
         </div>
     

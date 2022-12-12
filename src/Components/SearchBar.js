@@ -16,7 +16,7 @@ const SearchBar = ({setResult}) => {
     return(<>
         <form onSubmit={handleSubmit}>
         <div className="form-control">
-            <input type="text" placeholder="Search for location" className="input input-bordered  " value={searchLocation.location} onChange={searchHandler}/>
+            <input type="text" placeholder="Search for location" className="input input-bordered " value={searchLocation.location} onChange={searchHandler}/>
         </div>
         </form>
     </>);

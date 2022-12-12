@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "./Components/Navbar";
 import WeatherDisplay from "./Components/WeatherDisplay";
 import { getWeather, getFiveDay } from "./api";
@@ -22,8 +22,6 @@ const App = () =>{
         setFiveForecast(forecast);
     
     }
-
-    useEffect(()=>{console.log(fiveForecast)})
 
     const [isCelsius, changeUnit] = useState(true);
 

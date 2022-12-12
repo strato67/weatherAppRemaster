@@ -8,8 +8,11 @@ const WeatherDisplay = ({weatherData, unitConversion, fiveForecast}) =>{
         <div className="hero min-h-screen bg-base-100">
             
             <div className="hero-content flex-col lg:flex-row">
-                <div className="flex-col">
-                <img src="https://placeimg.com/260/400/arch" className="max-w-sm rounded-lg shadow-2xl" />
+                <div className="flex-col  w-80 items-center">
+                    <div className="justify-center flex pb-8">
+                    <img src={weatherData.main.temp !== '-'? `http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png` : ''} className="scale-[450%]"/>
+                    </div>
+                
        
                 <p className=" text-center capitalize">{weatherData.main.temp !== '-'? weatherData.weather[0].main : ''}</p>
 
@@ -44,7 +47,7 @@ const WeatherDisplay = ({weatherData, unitConversion, fiveForecast}) =>{
                 
                 </div>
                 
-                <div className="bg-neutral text-center p-4 rounded-lg lg:w-[196rem] lg:h-96">
+                <div className="bg-neutral text-center p-4 rounded-lg w-80 md:w-[45rem] lg:w-[60rem] h-[26rem]">
                     
                     <h1 className="text-5xl font-bold">{weatherData.sys.country == ''?  weatherData.name :  `${weatherData.name}, ${weatherData.sys.country}`}</h1>
                     <div className="divider"></div> 

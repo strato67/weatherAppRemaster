@@ -9,8 +9,10 @@ const ForecastCard = ({dayofWeek, unitConversion})=>{
     }
 
     return(<>
-        <div className="rounded bg-base-100 px-5 py-8 shrink-0">
+        <div className="rounded bg-base-100 px-5 py-6 shrink-0 grow">
             <p>{dateFormat(dayofWeek.dt_txt)}</p>
+            <div className="flex justify-center"><img src={`http://openweathermap.org/img/w/${dayofWeek.weather[0].icon}.png`}/></div>
+            <p>{dayofWeek.weather[0].main}</p>
             <div className="divider"></div> 
             <p>{unitCalculation(dayofWeek.main.temp,unitConversion)}</p>
 
