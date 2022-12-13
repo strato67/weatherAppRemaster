@@ -10,11 +10,11 @@ const WeatherDisplay = ({weatherData, unitConversion, fiveForecast}) =>{
             <div className="hero-content flex-col lg:flex-row">
                 <div className="flex-col  w-80 items-center">
                     <div className="justify-center flex pb-8">
-                    <img src={weatherData.main.temp !== '-'? `http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png` : ''} className="scale-[450%]"/>
+                    <img src={weatherData.main.temp !== '-'? `http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png` : ''} className="scale-[450%] pt-5 pb-2"/>
                     </div>
                 
        
-                <p className=" text-center capitalize">{weatherData.main.temp !== '-'? weatherData.weather[0].main : ''}</p>
+                <p className=" text-center capitalize pt-2">{weatherData.main.temp !== '-'? weatherData.weather[0].main : ''}</p>
 
                 <div className="divider"></div> 
                 <div>

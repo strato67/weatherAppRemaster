@@ -8,8 +8,9 @@ const WeatherInfo = ({weatherData, unitConversion, fiveForecast}) =>{
 
     const tabContents = {
         'Details': <WeatherDetails key={0} weatherData={weatherData} unitConversion={unitConversion}/>,
-        '5 Day Forecast' : <FiveDay key={1} fiveForecast={fiveForecast} unitConversion={unitConversion}/>,
-        'Map':'poo'
+        'Hourly':'poo',
+        '5-Day Forecast' : <FiveDay key={1} fiveForecast={fiveForecast} unitConversion={unitConversion}/>,
+        
 
     };
 
