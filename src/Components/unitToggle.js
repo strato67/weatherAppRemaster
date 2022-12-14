@@ -2,8 +2,6 @@ import React from "react";
 
 const UnitToggle = ({unitSelect}) =>{
 
-
-
     return(<>       
         <div className="form-control">
             <label className="label cursor-pointer">

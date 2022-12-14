@@ -5,6 +5,10 @@ const ForecastCard = ({dayofWeek, unitConversion})=>{
 
     const dateFormat = (date) =>{
         const d = new Date(date);
+        if(isNaN(d)){
+            return date;
+        }
+
         return d.toLocaleDateString("en-US", {weekday:'short',month:'short',day:'2-digit'});
     }
 

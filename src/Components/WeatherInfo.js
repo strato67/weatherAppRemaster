@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FiveDay from "./TabbedComponents/FiveDay";
 import WeatherDetails from "./TabbedComponents/WeatherDetails";
+import Hourly from "./TabbedComponents/Hourly";
 
 const WeatherInfo = ({weatherData, unitConversion, fiveForecast}) =>{
 
@@ -8,8 +9,8 @@ const WeatherInfo = ({weatherData, unitConversion, fiveForecast}) =>{
 
     const tabContents = {
         'Details': <WeatherDetails key={0} weatherData={weatherData} unitConversion={unitConversion}/>,
-        'Hourly':'poo',
-        '5-Day Forecast' : <FiveDay key={1} fiveForecast={fiveForecast} unitConversion={unitConversion}/>,
+        'Hourly': <Hourly key={1} hourlyForecast={fiveForecast} unitConversion={unitConversion}/>,
+        '5-Day Forecast' : <FiveDay key={2} fiveForecast={fiveForecast} unitConversion={unitConversion}/>,
         
 
     };
