@@ -6,7 +6,7 @@ const Hourly = ({hourlyForecast, unitConversion})=>{
     const modifyTime=(array)=>{
         let modfiedArr = array.slice(0,8);
 
-        //Will need to create seperate component to handle ForecastCard for hourly. Creating instability switching between cards
+        //Will need to create seperate component to handle ForecastCard for hourly. OR, move function for date time out of forecast component, shift function to parent hourly and fiveday Creating instability switching between cards
         /*modfiedArr.forEach(e => {
             let formattedDate = new Date(e.dt_txt);
             e.dt_txt= formattedDate.toLocaleTimeString('en-US');
