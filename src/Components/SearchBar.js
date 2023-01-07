@@ -7,7 +7,6 @@ const SearchBar = ({setResult}) => {
     const handleSubmit= (e) =>{
         e.preventDefault();
         setResult(searchLocation);
-               
         
     }
 

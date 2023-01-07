@@ -12,7 +12,6 @@ const WeatherInfo = ({weatherData, unitConversion, fiveForecast}) =>{
         'Hourly': <Hourly key={1} hourlyForecast={fiveForecast} unitConversion={unitConversion}/>,
         '5-Day Forecast' : <FiveDay key={2} fiveForecast={fiveForecast} unitConversion={unitConversion}/>,
         
-
     };
 
     return(<>
@@ -33,7 +32,6 @@ const WeatherInfo = ({weatherData, unitConversion, fiveForecast}) =>{
         </div>
         
     </div>
-
         
     </>);
 }

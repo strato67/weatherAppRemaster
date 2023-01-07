@@ -28,8 +28,4 @@ async function getFiveDay(coordinates) {
         
 }
 
-
-
-
-
 export {getWeather, getFiveDay};

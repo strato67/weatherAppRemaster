@@ -3,16 +3,13 @@ import ForecastCard from "./ForecastCard";
 
 const Hourly = ({hourlyForecast, unitConversion})=>{
 
-    const modifyTime=(array)=>{
-        let modfiedArr = array.slice(0,8);
+    const timeFormat = (time) =>{
+        const d = new Date(time);
+        if(isNaN(d)){
+            return date;
+        }
 
-        //Will need to create seperate component to handle ForecastCard for hourly. OR, move function for date time out of forecast component, shift function to parent hourly and fiveday Creating instability switching between cards
-        /*modfiedArr.forEach(e => {
-            let formattedDate = new Date(e.dt_txt);
-            e.dt_txt= formattedDate.toLocaleTimeString('en-US');
-        });*/
-
-        return modfiedArr;
+        return d.toLocaleTimeString('en-US');
     }
 
     return(<>
@@ -20,8 +17,8 @@ const Hourly = ({hourlyForecast, unitConversion})=>{
     {hourlyForecast[0] == 'Not Available' ?  <div className='py-5 text-xl'>{hourlyForecast[0]}</div> :
     
     <div className="flex gap-2 py-5 overflow-x-auto">
-        
-        {modifyTime(hourlyForecast).map((dayofWeek)=>{return(<ForecastCard key={hourlyForecast.indexOf(dayofWeek)} dayofWeek={dayofWeek} unitConversion={unitConversion}/>)})}
+        //Need to get current time and slice array at that point
+        {hourlyForecast.slice(0,8).map((dayofWeek)=>{return(<ForecastCard key={hourlyForecast.indexOf(dayofWeek)} dayofWeek={dayofWeek} unitConversion={unitConversion} date={timeFormat(dayofWeek.dt_txt)}/>)})}
        
     </div>}
     

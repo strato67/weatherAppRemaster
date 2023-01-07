@@ -3,7 +3,6 @@ import { windCalculation, precipCalculation} from './../../unitConvert'
 
 const WeatherDetails = ({weatherData, unitConversion}) =>{
 
-
     return(<>
     
     {weatherData.sys.country == ''?  <div className='py-5 text-xl'>Not Available </div> :
@@ -23,11 +22,9 @@ const WeatherDetails = ({weatherData, unitConversion}) =>{
               
             </div>
         </div>
-    
-    
+        
     }
-    
-    
+        
     </>);
 }
 

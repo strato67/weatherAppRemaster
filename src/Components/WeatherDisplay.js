@@ -43,8 +43,7 @@ const WeatherDisplay = ({weatherData, unitConversion, fiveForecast}) =>{
                     </label>
 
                 </div>
-                
-                
+                                
                 </div>
                 
                 <div className="bg-neutral text-center p-4 rounded-lg w-80 md:w-[45rem] lg:w-[60rem] h-[26rem]">
