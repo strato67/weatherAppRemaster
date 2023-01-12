@@ -27,4 +27,3 @@ const Hourly = ({hourlyForecast, unitConversion})=>{
 }
 
 export default Hourly;
-//Need to get current time and slice array at that point
