@@ -17,7 +17,7 @@ const Hourly = ({hourlyForecast, unitConversion})=>{
     {hourlyForecast[0] == 'Not Available' ?  <div className='py-5 text-xl'>{hourlyForecast[0]}</div> :
     
     <div className="flex gap-2 py-5 overflow-x-auto">
-        //Need to get current time and slice array at that point
+
         {hourlyForecast.slice(0,8).map((dayofWeek)=>{return(<ForecastCard key={hourlyForecast.indexOf(dayofWeek)} dayofWeek={dayofWeek} unitConversion={unitConversion} date={timeFormat(dayofWeek.dt_txt)}/>)})}
        
     </div>}
@@ -27,3 +27,4 @@ const Hourly = ({hourlyForecast, unitConversion})=>{
 }
 
 export default Hourly;
+//Need to get current time and slice array at that point
